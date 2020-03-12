@@ -46,8 +46,8 @@ namespace musicOrganizer.Controllers
             Cd newCd = new Cd(cdTitle);
             foundArtist.AddCd(newCd);
             List<Cd> artistCds = foundArtist.Cds;
-            model.Add("Cds", artistCds);
-            model.Add("Artist", foundArtist);
+            model.Add("cds", artistCds);
+            model.Add("artist", foundArtist);
             return View("Show", model);
         }
     }

@@ -1,3 +1,13 @@
 @{
   Layout = "_Layout";
 }
+
+<h1>Add CD Title to @Model.Name</h1>
+<form action="/artist/@Model.Id/cds" method="post">
+  <input id="artistId" name="artistId" type="hidden" value="@Model.Id">
+  <label for="cdTitle">CD Title</label>
+  <input id="cdTitle" name="cdTitle" type="text">
+  <button type="submit">Add CD</button>
+</form>
+
+<p><a href="/artists/@Model.Id">Return to Artist</a></p>
