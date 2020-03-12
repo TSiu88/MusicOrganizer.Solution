@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@using musicOrganizer.Models;
+
+<h3>Here is the list of CD's :</h3>
+<ol>
+  @foreach(Cd cd in @Model["cds"])
+  {
+    <li><a href='/artists/@Model["artist"].Id/cds/@cd.Id'>@cd.Title</a></li>
+  }
+  
+</ol>
